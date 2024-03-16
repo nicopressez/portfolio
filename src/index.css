@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family:"Roobert";
+  src: url("../src/assets/fonts/RoobertMedium.ttf")
+}
+
+@font-face {
+  font-family:"Roxborough";
+  src: url("../src/assets/fonts/RoxboroughCF-DemiBoldItalic.otf")
+}
