@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         roobert: ["Roobert", "sans-serif"],
+        roobertreg: ["RoobertReg", "sans-serif"],
         roxborough: ["Roxborough", "sans-serif"]
       }
     },

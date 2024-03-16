@@ -11,3 +11,8 @@
   font-family:"Roxborough";
   src: url("../src/assets/fonts/RoxboroughCF-DemiBoldItalic.otf")
 }
+
+@font-face {
+  font-family:"RoobertReg";
+  src: url("../src/assets/fonts/RoobertRegular.ttf")
+}
