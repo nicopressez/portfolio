@@ -93,13 +93,24 @@ const Hero = () => {
                 enter="transition-opacity delay-1000 duration-300"
                 enterFrom="opacity-0"
                 enterTo="opacity-100">
+                
                 <div className={`pl-40 pr-40 flex justify-between font-roobertreg
-                 mt-[8%]
-                 ${aboutHover || worksHover || resumeHover ? "bg-white" : 
-                 ""}`}>
+                 mt-[8%] relative
+                 `}>
+                    <div className={` scale-y-0 pt-20 pb-20
+                transition duration-500 absolute -top-16 left-0 w-full 
+                ${aboutHover || worksHover || resumeHover ? "bg-gradient-to-t from-white to-gray-300 scale-y-100" : 
+                ""}
+                `}>
+                    {(resumeHover || aboutHover || worksHover) && 
+                    <p className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-roobert text-gray-300  text-[200px] italic">
+                        {resumeHover ? "RESUME" : aboutHover ? "ABOUT" : worksHover ? "WORKS" : ""} 
+                    </p>}
+                
+                </div>
                     <div className={`
-                    ${aboutHover || resumeHover ? "opacity-0" : ""}
-                    ${worksHover ? "text-black" : ""}`
+                    transition-colors duration-300 z-50
+                    ${aboutHover || resumeHover || worksHover? "text-black" : ""}`
                     }
                     onMouseEnter={() => setWorksHover(true)}
                     onMouseLeave={() => setWorksHover(false)}>
@@ -109,8 +120,8 @@ const Hero = () => {
                             Works</p>
                     </div>
                     <div className={`
-                    ${worksHover || resumeHover ? "opacity-0" : ""}
-                    ${aboutHover ? "text-black" : ""}`}
+                     transition-colors duration-300  z-50
+                     ${aboutHover || resumeHover || worksHover? "text-black" : ""}`}
                     onMouseEnter={() => setAboutHover(true)}
                     onMouseLeave={() => setAboutHover(false)}>
                         <p className=" text-sm opacity-80">02</p>
@@ -118,8 +129,8 @@ const Hero = () => {
                             About</p>
                    </div>
                    <div className={`
-                    ${worksHover || aboutHover ? "opacity-0" : ""}
-                    ${resumeHover ? "text-black" : ""}`}
+                   transition-colors duration-300 z-50
+                   ${aboutHover || resumeHover || worksHover? "text-black" : ""}`}
                     onMouseEnter={() => setResumeHover(true)}
                     onMouseLeave={() => setResumeHover(false)}>
                         <p className=" text-sm opacity-80">03</p>
