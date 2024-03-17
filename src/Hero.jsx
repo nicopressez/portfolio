@@ -16,7 +16,7 @@ const Hero = () => {
             <Transition
                 show={true}
                 appear={true}
-                enter="transition-opacity delay-1000 duration-300"
+                enter="transition-opacity delay-1000 duration-300 ease-out"
                 enterFrom="opacity-0"
                 enterTo="opacity-100">
                 <div className="group inline-block relative">
@@ -81,7 +81,7 @@ const Hero = () => {
                 <Transition 
                 appear={true}
                 show={true}
-                enter="transition-opacity delay-500 duration-300"
+                enter="transition-opacity delay-500 duration-300 ease-out"
                 enterFrom="opacity-0"
                 enterTo="opacity-100">
                 Frontend Developer
@@ -90,7 +90,7 @@ const Hero = () => {
                 <Transition
                 show={true}
                 appear={true}
-                enter="transition-opacity delay-1000 duration-300"
+                enter="transition-opacity delay-1000 duration-300 ease-out"
                 enterFrom="opacity-0"
                 enterTo="opacity-100">
                 
@@ -98,14 +98,22 @@ const Hero = () => {
                  mt-[8%] relative
                  `}>
                     <div className={` scale-y-0 pt-20 pb-20
-                transition duration-500 absolute -top-16 left-0 w-full 
+                transition duration-500 absolute -top-16 left-0 w-full ease-out
                 ${aboutHover || worksHover || resumeHover ? "bg-gradient-to-t from-white to-gray-300 scale-y-100" : 
                 ""}
                 `}>
                     {(resumeHover || aboutHover || worksHover) && 
-                    <p className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-roobert text-gray-300  text-[200px] italic">
+                    <Transition
+                    appear={true}
+                    show={true}
+                    enter="transition delay-500 duration-300 ease-out"
+                    enterFrom="opacity-0 transform scale-x-50 "
+                    enterTo="opacity-100 transform scale-x-100">
+                    <p className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-roobert text-gray-300  text-[200px] italic
+                     tracking-wider">
                         {resumeHover ? "RESUME" : aboutHover ? "ABOUT" : worksHover ? "WORKS" : ""} 
-                    </p>}
+                    </p>
+                    </Transition>}
                 
                 </div>
                     <div className={`
