@@ -73,6 +73,24 @@ const Hero = () => {
                 Frontend Developer
                 </Transition>
                 </h2>
+                <div className="ml-40 mr-40 flex justify-between font-roobertreg
+                 mt-[8%]">
+                    <div>
+                        <p className=" text-sm opacity-80">01</p>
+                        <p className=" text-[20px] -mt-2">
+                            Works</p>
+                    </div>
+                    <div>
+                        <p className=" text-sm opacity-80">02</p>
+                        <p className=" text-[20px] -mt-2">
+                            About</p>
+                   </div>
+                   <div>
+                        <p className=" text-sm opacity-80">03</p>
+                        <p className=" text-[20px] -mt-2">
+                            Resume</p>
+                   </div>
+                </div>
         </div>
     )
 }
