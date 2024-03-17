@@ -1,11 +1,24 @@
 import { Transition } from "@headlessui/react"
 import arrow from "./assets/arrow.png"
+import { useState } from "react"
 
 
 const Hero = () => {
+
+    // State handle for hover animation
+    const [worksHover, setWorksHover] = useState(false)
+    const [aboutHover, setAboutHover] = useState(false)
+    const [resumeHover, setResumeHover] = useState(false)
+
     return (
         <div className=" bg-black w-screen h-screen text-white relative">
             <div className="font-roobertreg text-end pt-10 absolute right-2">
+            <Transition
+                show={true}
+                appear={true}
+                enter="transition-opacity delay-1000 duration-300"
+                enterFrom="opacity-0"
+                enterTo="opacity-100">
                 <div className="group inline-block relative">
             <a
             href="https://www.linkedin.com/in/nicolas-pressez-8300951b5/"
@@ -34,6 +47,7 @@ const Hero = () => {
             transition transform duration-500 origin-left group-hover:scale-x-100"
             ></div>
             </div>
+            </Transition>
             </div>
             <h1 className="text-center text-[128px] 
              pt-[5%]">
@@ -73,6 +87,12 @@ const Hero = () => {
                 Frontend Developer
                 </Transition>
                 </h2>
+                <Transition
+                show={true}
+                appear={true}
+                enter="transition-opacity delay-1000 duration-300"
+                enterFrom="opacity-0"
+                enterTo="opacity-100">
                 <div className="ml-40 mr-40 flex justify-between font-roobertreg
                  mt-[8%]">
                     <div>
@@ -91,6 +111,7 @@ const Hero = () => {
                             Resume</p>
                    </div>
                 </div>
+                </Transition>
         </div>
     )
 }
