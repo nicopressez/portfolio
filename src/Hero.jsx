@@ -93,19 +93,35 @@ const Hero = () => {
                 enter="transition-opacity delay-1000 duration-300"
                 enterFrom="opacity-0"
                 enterTo="opacity-100">
-                <div className="ml-40 mr-40 flex justify-between font-roobertreg
-                 mt-[8%]">
-                    <div>
+                <div className={`pl-40 pr-40 flex justify-between font-roobertreg
+                 mt-[8%]
+                 ${aboutHover || worksHover || resumeHover ? "bg-white" : 
+                 ""}`}>
+                    <div className={`
+                    ${aboutHover || resumeHover ? "opacity-0" : ""}
+                    ${worksHover ? "text-black" : ""}`
+                    }
+                    onMouseEnter={() => setWorksHover(true)}
+                    onMouseLeave={() => setWorksHover(false)}>
                         <p className=" text-sm opacity-80">01</p>
-                        <p className=" text-[20px] -mt-2">
+                        <p className=" text-[20px] -mt-2"
+                        >
                             Works</p>
                     </div>
-                    <div>
+                    <div className={`
+                    ${worksHover || resumeHover ? "opacity-0" : ""}
+                    ${aboutHover ? "text-black" : ""}`}
+                    onMouseEnter={() => setAboutHover(true)}
+                    onMouseLeave={() => setAboutHover(false)}>
                         <p className=" text-sm opacity-80">02</p>
                         <p className=" text-[20px] -mt-2">
                             About</p>
                    </div>
-                   <div>
+                   <div className={`
+                    ${worksHover || aboutHover ? "opacity-0" : ""}
+                    ${resumeHover ? "text-black" : ""}`}
+                    onMouseEnter={() => setResumeHover(true)}
+                    onMouseLeave={() => setResumeHover(false)}>
                         <p className=" text-sm opacity-80">03</p>
                         <p className=" text-[20px] -mt-2">
                             Resume</p>
