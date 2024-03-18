@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faXmark, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import arrowblack from "./assets/arrowblack.png"
 
@@ -8,8 +8,10 @@ import arrowblack from "./assets/arrowblack.png"
 
 const Works = ({ setShowWorks }) => {
     const [faithhubPreview, setFaithhubPreview] = useState("desktop")
+    const [currentPage, setCurrentPage] = useState("faithhub")
+
     return (
-        
+
         <div
         className={`bg-gray-200 w-2/3 absolute top-1 left-1/2 h-full transform -translate-x-1/2 z-50 rounded-xl text-black p-12 overflow-y-auto transition-transform
         
@@ -17,9 +19,18 @@ const Works = ({ setShowWorks }) => {
          style={{ overflowY: "scroll", scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
             <FontAwesomeIcon icon={faXmark} 
-            className="float-right h-6 w-6 hover:cursor-pointer"
+            className="absolute right-10 h-6 w-6 hover:cursor-pointer"
             onClick={ () => setShowWorks(false)}/>
-            <h1 className="text-4xl font-roobert mb-5">Works</h1>
+            <div className='absolute right-10 top-20 transition duration-100
+             font-roobert text-xl text-cyan-400 hover:text-cyan-500 hover:underline
+             hover:cursor-pointer' 
+             onClick={() => setCurrentPage("ecommerce")}> Next project <span className=" font-bold"> e-Commerce site</span>
+              <FontAwesomeIcon icon={faArrowRight} 
+              className='ml-2 w-5 h-5'/>
+            </div>
+
+
+            <h1 className="text-4xl font-roobert mb-10">Works</h1>
 
             <div className='text-center font-roobert'>
                 <h2 className='text-5xl text-cyan-400 font-bold 
