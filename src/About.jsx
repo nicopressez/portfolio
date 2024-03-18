@@ -1,4 +1,8 @@
-const About = () => {
+import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+
+const About = ({ setShowAbout, setShowResume, setShowWorks}) => {
     return (
         
         <div
@@ -7,10 +11,19 @@ const About = () => {
          `}
          style={{ overflowY: "scroll", scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
+        <FontAwesomeIcon icon={faXmark} 
+            className="float-right h-6 w-6 hover:cursor-pointer"
+            onClick={ () => setShowAbout(false)}/>
             <h1 className="text-4xl">About</h1>
             
         </div>
     )
+}
+
+About.propTypes = {
+    setShowAbout: PropTypes.func,
+    setShowResume: PropTypes.func,
+    setShowWorks: PropTypes.func
 }
 
 export default About

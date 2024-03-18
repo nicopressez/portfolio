@@ -197,7 +197,7 @@ const Hero = () => {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-20"
                 >
-                <Resume />
+                <Resume/>
                 </Transition>
 
                 <Transition
@@ -211,7 +211,7 @@ const Hero = () => {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-20"
             >
-                <Works />
+                <Works setShowWorks={setShowWorks}/>
                 
             </Transition>
 
@@ -226,7 +226,9 @@ const Hero = () => {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-20"
             >
-                <About />
+                <About setShowAbout={setShowAbout}
+                       setShowResume={setShowResume}
+                       setShowWorks={setShowWorks}/>
                 
             </Transition>
 
@@ -241,7 +243,7 @@ const Hero = () => {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-20"
             >
-                <Resume />
+                <Resume setShowResume={setShowResume}/>
                 
             </Transition>
 
