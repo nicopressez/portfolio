@@ -2,6 +2,8 @@ import { Transition } from "@headlessui/react"
 import arrow from "./assets/arrow.png"
 import { useState } from "react"
 import Resume from "./Resume"
+import Works from "./Works"
+import About from "./About"
 
 
 const Hero = () => {
@@ -129,7 +131,7 @@ const Hero = () => {
                             Works</p>
                     </div>
                     <div className={`
-                     transition-colors duration-300  z-50
+                     transition-colors duration-300  z-50 hover:cursor-pointer
                      ${aboutHover || resumeHover || worksHover? "text-black" : ""}`}
                     onMouseEnter={() => setAboutHover(true)}
                     onMouseLeave={() => setAboutHover(false)}>
@@ -138,7 +140,7 @@ const Hero = () => {
                             About</p>
                    </div>
                    <div className={`
-                   transition-colors duration-300 z-50
+                   transition-colors duration-300 z-50 hover:cursor-pointer
                    ${aboutHover || resumeHover || worksHover? "text-black" : ""}`}
                     onMouseEnter={() => setResumeHover(true)}
                     onMouseLeave={() => setResumeHover(false)}>
@@ -147,6 +149,45 @@ const Hero = () => {
                             Resume</p>
                    </div>
                 </div>
+                </Transition>
+
+                <Transition
+                as="div"
+                className="absolute top-[92%] w-full h-full rotate-3"
+                show={worksHover}
+                enter="transition duration-300 ease-out"
+                enterFrom="opacity-0 translate-y-20"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition duration-300 ease-in"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-20">
+                <Works />
+                </Transition>
+
+                <Transition
+                as="div"
+                className="absolute top-[92%] w-full h-full rotate-3"
+                show={aboutHover}
+                enter="transition duration-300 ease-out"
+                enterFrom="opacity-0 translate-y-20"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition duration-300 ease-in"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-20">
+                <About />
+                </Transition>
+
+                <Transition
+                as="div"
+                className="absolute top-[92%] w-full h-full rotate-3"
+                show={resumeHover}
+                enter="transition duration-300 ease-out"
+                enterFrom="opacity-0 translate-y-20"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition duration-300 ease-in"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-20">
+                <Resume />
                 </Transition>
         </div>
     )

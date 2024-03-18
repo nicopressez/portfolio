@@ -8,6 +8,7 @@ const Resume = () => {
          style={{ overflowY: "scroll", scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
             <h1 className="text-4xl">Resume</h1>
+            <p className="text-4xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quis fugit vitae repellendus itaque iusto, quae illo at dolorum facere delectus fuga magni, laborum assumenda sed. Mollitia quibusdam sequi iusto?</p>
             
         </div>
     )
