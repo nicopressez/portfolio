@@ -1,6 +1,7 @@
 import { Transition } from "@headlessui/react"
 import arrow from "./assets/arrow.png"
 import { useState } from "react"
+import Resume from "./Resume"
 
 
 const Hero = () => {
@@ -11,7 +12,7 @@ const Hero = () => {
     const [resumeHover, setResumeHover] = useState(false)
 
     return (
-        <div className=" bg-black w-screen h-screen text-white relative">
+        <div className=" bg-black w-screen h-screen text-white relative overflow-hidden">
             <div className="font-roobertreg text-end pt-10 absolute right-2">
             <Transition
                 show={true}
@@ -106,7 +107,7 @@ const Hero = () => {
                     <Transition
                     appear={true}
                     show={true}
-                    enter="transition delay-500 duration-300 ease-out"
+                    enter="transition delay-300 duration-300 ease-out"
                     enterFrom="opacity-0 transform scale-x-50 "
                     enterTo="opacity-100 transform scale-x-100">
                     <p className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-roobert text-gray-300  text-[200px] italic
@@ -117,7 +118,7 @@ const Hero = () => {
                 
                 </div>
                     <div className={`
-                    transition-colors duration-300 z-50
+                    transition duration-300 z-50 hover:cursor-pointer
                     ${aboutHover || resumeHover || worksHover? "text-black" : ""}`
                     }
                     onMouseEnter={() => setWorksHover(true)}
