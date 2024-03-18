@@ -1,13 +1,17 @@
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import arrowblack from "./assets/arrowblack.png"
+
 
 
 const Works = ({ setShowWorks }) => {
+    const [faithhubPreview, setFaithhubPreview] = useState("desktop")
     return (
         
         <div
-        className={`bg-gray-200 w-2/3 absolute top-1 left-1/2 h-full transform -translate-x-1/2 z-50 rounded-xl font-roobertreg text-black p-12 overflow-y-auto transition-transform
+        className={`bg-gray-200 w-2/3 absolute top-1 left-1/2 h-full transform -translate-x-1/2 z-50 rounded-xl text-black p-12 overflow-y-auto transition-transform
         
          `}
          style={{ overflowY: "scroll", scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -15,8 +19,53 @@ const Works = ({ setShowWorks }) => {
             <FontAwesomeIcon icon={faXmark} 
             className="float-right h-6 w-6 hover:cursor-pointer"
             onClick={ () => setShowWorks(false)}/>
-            <h1 className="text-4xl">Works</h1>
-            <p className="text-4xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nemo architecto minus eos, harum illum? Ipsam, iste enim. Quisquam ut quaerat cumque velit qui corrupti expedita sapiente aliquam, debitis facere.</p>
+            <h1 className="text-4xl font-roobert mb-5">Works</h1>
+
+            <div className='text-center font-roobert'>
+                <h2 className='text-5xl text-cyan-400 font-bold 
+                 tracking-wide'>FaithHub</h2>
+                 <p className='italic mb-3'>a Full-Stack social media app</p>
+                 
+                <div className="group inline-block relative ml-5">
+                <a href='https://faithhub-demo.netlify.app/' target='blank'
+                 className=' font-bold text-xl'>Live demo</a>
+            <img src={arrowblack}
+            className="opacity-0 inline h-5 w-5 mr-10 mb-1 
+            transition-opacity duration-300 group-hover:opacity-100" />
+            <div
+            className="mt-2 absolute scale-x-0 bottom-0 left-0 w-28 bg-black h-[3px] 
+            transition transform duration-500 origin-left group-hover:scale-x-100"
+            >
+            </div>
+            </div>
+
+            <div className="group inline-block relative">
+                <a href='https://github.com/nicopressez/faithhub' target='blank'
+                 className=' font-bold text-xl'>Repository</a>
+            <img src={arrowblack}
+            className="opacity-0 inline h-5 w-5 mb-1 
+            transition-opacity duration-300 group-hover:opacity-100" />
+            <div
+            className="mt-2 absolute scale-x-0 bottom-0 left-0 w-28 bg-black h-[3px] 
+            transition transform duration-500 origin-left group-hover:scale-x-100"
+            >
+            </div>
+            </div>
+                 
+                 {faithhubPreview === "desktop" && 
+                 <div className='w-[52vw] h-[29.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
+                 </div>}
+                 {faithhubPreview === "mobile" && 
+                 <div className='w-[18vw] h-[29.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
+                 </div>}
+                 <button className={`mr-5 mt-2 underline
+                 ${faithhubPreview !== "desktop" ? " text-gray-500 hover:text-gray-700" : ""}`}
+                 onClick={ () => setFaithhubPreview("desktop")}>Desktop</button>
+                 <button className={`underline
+                 ${faithhubPreview !== "mobile" ? " text-gray-500 hover:text-gray-700" : ""}`}
+                 onClick={ () => setFaithhubPreview("mobile")}>Mobile</button>
+
+            </div>
             
         </div>
     )
