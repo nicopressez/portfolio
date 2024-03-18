@@ -30,7 +30,7 @@ const Hero = () => {
                 <div className="group inline-block relative">
             <a
             href="https://www.linkedin.com/in/nicolas-pressez-8300951b5/"
-            target="blank">LinkedIn</a>
+            target="_blank">LinkedIn</a>
             <img src={arrow}
             className="opacity-0 inline h-5 w-5 mr-[2.75rem] mb-1
             transition-opacity duration-300 group-hover:opacity-100" />
@@ -44,7 +44,7 @@ const Hero = () => {
             <div className="group inline-block relative">
             <a
              href="https://github.com/nicopressez"
-             target="blank"
+             target="_blank"
              >GitHub
              </a>
               <img src={arrow}
