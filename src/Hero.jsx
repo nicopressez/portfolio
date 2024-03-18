@@ -13,6 +13,11 @@ const Hero = () => {
     const [aboutHover, setAboutHover] = useState(false)
     const [resumeHover, setResumeHover] = useState(false)
 
+    // State handle to show corresponding component
+    const [showWorks, setShowWorks] = useState(false)
+    const [showAbout, setShowAbout] = useState(false)
+    const [showResume, setShowResume] = useState(false)
+
     return (
         <div className=" bg-black w-screen h-screen text-white relative overflow-hidden">
             <div className="font-roobertreg text-end pt-10 absolute right-2">
@@ -124,7 +129,8 @@ const Hero = () => {
                     ${aboutHover || resumeHover || worksHover? "text-black" : ""}`
                     }
                     onMouseEnter={() => setWorksHover(true)}
-                    onMouseLeave={() => setWorksHover(false)}>
+                    onMouseLeave={() => setWorksHover(false)}
+                    onClick={() => setShowWorks(true)}>
                         <p className=" text-sm opacity-80">01</p>
                         <p className=" text-[20px] -mt-2"
                         >
@@ -134,7 +140,8 @@ const Hero = () => {
                      transition-colors duration-300  z-50 hover:cursor-pointer
                      ${aboutHover || resumeHover || worksHover? "text-black" : ""}`}
                     onMouseEnter={() => setAboutHover(true)}
-                    onMouseLeave={() => setAboutHover(false)}>
+                    onMouseLeave={() => setAboutHover(false)}
+                    onClick={() => setShowAbout(true)}>
                         <p className=" text-sm opacity-80">02</p>
                         <p className=" text-[20px] -mt-2">
                             About</p>
@@ -143,7 +150,8 @@ const Hero = () => {
                    transition-colors duration-300 z-50 hover:cursor-pointer
                    ${aboutHover || resumeHover || worksHover? "text-black" : ""}`}
                     onMouseEnter={() => setResumeHover(true)}
-                    onMouseLeave={() => setResumeHover(false)}>
+                    onMouseLeave={() => setResumeHover(false)}
+                    onClick={() => setShowResume(true)}>
                         <p className=" text-sm opacity-80">03</p>
                         <p className=" text-[20px] -mt-2">
                             Resume</p>
@@ -154,20 +162,21 @@ const Hero = () => {
                 <Transition
                 as="div"
                 className="absolute top-[92%] w-full h-full rotate-3"
-                show={worksHover}
+                show={(worksHover && !showWorks)}
                 enter="transition duration-300 ease-out"
                 enterFrom="opacity-0 translate-y-20"
                 enterTo="opacity-100 translate-y-0"
                 leave="transition duration-300 ease-in"
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-20">
+                
                 <Works />
                 </Transition>
 
                 <Transition
                 as="div"
                 className="absolute top-[92%] w-full h-full rotate-3"
-                show={aboutHover}
+                show={aboutHover && !showAbout}
                 enter="transition duration-300 ease-out"
                 enterFrom="opacity-0 translate-y-20"
                 enterTo="opacity-100 translate-y-0"
@@ -180,15 +189,62 @@ const Hero = () => {
                 <Transition
                 as="div"
                 className="absolute top-[92%] w-full h-full rotate-3"
-                show={resumeHover}
+                show={resumeHover && !showResume}
                 enter="transition duration-300 ease-out"
                 enterFrom="opacity-0 translate-y-20"
                 enterTo="opacity-100 translate-y-0"
                 leave="transition duration-300 ease-in"
                 leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-20">
+                leaveTo="opacity-0 translate-y-20"
+                >
                 <Resume />
                 </Transition>
+
+                <Transition
+                as="div"
+                className="absolute top-1 w-full h-full z-[100]"
+                show={showWorks}
+                enter="transition duration-500 ease-out"
+                enterFrom=" translate-y-full"
+                enterTo=" translate-y-0"
+                leave="transition duration-300 ease-in"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-20"
+            >
+                <Works />
+                
+            </Transition>
+
+            <Transition
+                as="div"
+                className="absolute top-1 w-full h-full z-[100]"
+                show={showAbout}
+                enter="transition duration-500 ease-out"
+                enterFrom=" translate-y-full"
+                enterTo=" translate-y-0"
+                leave="transition duration-300 ease-in"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-20"
+            >
+                <About />
+                
+            </Transition>
+
+            <Transition
+                as="div"
+                className="absolute top-1 w-full h-full z-[100]"
+                show={showResume}
+                enter="transition duration-500 ease-out"
+                enterFrom=" translate-y-full"
+                enterTo=" translate-y-0"
+                leave="transition duration-300 ease-in"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-20"
+            >
+                <Resume />
+                
+            </Transition>
+
         </div>
     )
 }
