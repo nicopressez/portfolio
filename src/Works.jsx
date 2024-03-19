@@ -8,7 +8,7 @@ import { Transition } from '@headlessui/react';
 
 
 const Works = ({ setShowWorks }) => {
-    const [faithhubPreview, setFaithhubPreview] = useState("desktop")
+    const [preview, setPreview] = useState("desktop")
     const [currentPage, setCurrentPage] = useState("faithhub")
 
     return (
@@ -19,13 +19,19 @@ const Works = ({ setShowWorks }) => {
          `}
          style={{ overflowY: "scroll", scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
+        <h1 className="absolute text-4xl font-roobert ">Works</h1>
             <FontAwesomeIcon icon={faXmark} 
             className="absolute right-10 h-6 w-6 hover:cursor-pointer"
             onClick={ () => setShowWorks(false)}/>
 
-            <Transition
-            show={currentPage === "faithhub"}>
-            <div className='absolute right-10 top-20 transition duration-100
+            <Transition as='div'
+            className="mt-20 w-full relative"
+            show={currentPage === "faithhub"}
+            enter='transition duration-500 ease-out'
+            enterFrom='opacity-0 transform -translate-x-40 '
+            enterTo='opacity-100 transform translate-x-0 '
+            >
+            <div className='absolute right-10 -top-4 transition duration-100
              font-roobert text-xl text-cyan-400 hover:text-cyan-500 hover:underline
              hover:cursor-pointer' 
              onClick={() => setCurrentPage("ecommerce")}> Next project <span className=" font-bold"> e-Commerce site</span>
@@ -34,7 +40,7 @@ const Works = ({ setShowWorks }) => {
             </div>
 
 
-            <h1 className="text-4xl font-roobert mb-10">Works</h1>
+            
 
             <div className='text-center font-roobert'>
                 <h2 className='text-5xl text-cyan-400 font-bold 
@@ -67,25 +73,30 @@ const Works = ({ setShowWorks }) => {
             </div>
             </div>
                  
-                 {faithhubPreview === "desktop" && 
+                 {preview === "desktop" && 
                  <div className='w-[52vw] h-[29.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
                  </div>}
-                 {faithhubPreview === "mobile" && 
+                 {preview === "mobile" && 
                  <div className='w-[18vw] h-[29.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
                  </div>}
                  <button className={`mr-5 mt-2 underline
-                 ${faithhubPreview !== "desktop" ? " text-gray-500 hover:text-gray-700" : ""}`}
-                 onClick={ () => setFaithhubPreview("desktop")}>Desktop</button>
+                 ${preview !== "desktop" ? " text-gray-500 hover:text-gray-700" : ""}`}
+                 onClick={ () => setPreview("desktop")}>Desktop</button>
                  <button className={`underline
-                 ${faithhubPreview !== "mobile" ? " text-gray-500 hover:text-gray-700" : ""}`}
-                 onClick={ () => setFaithhubPreview("mobile")}>Mobile</button>
+                 ${preview !== "mobile" ? " text-gray-500 hover:text-gray-700" : ""}`}
+                 onClick={ () => setPreview("mobile")}>Mobile</button>
 
             </div>
             </Transition>
 
-            <Transition
-            show={currentPage === "ecommerce"}>
-            <div className='absolute left-10 top-24 transition duration-100
+            <Transition as='div'
+            className="mt-20 w-full relative"
+            show={currentPage === "ecommerce"}
+            enter='transition duration-500 ease-out'
+            enterFrom='opacity-0 transform translate-x-20 '
+            enterTo='opacity-100 transform translate-x-0 '
+            >
+            <div className='absolute left-10 -top-4  transition duration-100
              font-roobert text-xl text-cyan-400 hover:text-cyan-500 hover:underline
              hover:cursor-pointer' 
              onClick={() => setCurrentPage("faithhub")}> 
@@ -94,10 +105,6 @@ const Works = ({ setShowWorks }) => {
              Previous project <span className=" font-bold"> FaithHub</span>
              
             </div>
-
-
-            <h1 className="text-4xl font-roobert mb-10">Works</h1>
-
             <div className='text-center font-roobert'>
                 <h2 className='text-5xl font-bold 
                  tracking-wide'>e-Commerce site</h2>
@@ -129,18 +136,18 @@ const Works = ({ setShowWorks }) => {
             </div>
             </div>
                  
-                 {faithhubPreview === "desktop" && 
+                 {preview === "desktop" && 
                  <div className='w-[52vw] h-[29.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
                  </div>}
-                 {faithhubPreview === "mobile" && 
+                 {preview === "mobile" && 
                  <div className='w-[18vw] h-[29.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
                  </div>}
                  <button className={`mr-5 mt-2 underline
-                 ${faithhubPreview !== "desktop" ? " text-gray-500 hover:text-gray-700" : ""}`}
-                 onClick={ () => setFaithhubPreview("desktop")}>Desktop</button>
+                 ${preview !== "desktop" ? " text-gray-500 hover:text-gray-700" : ""}`}
+                 onClick={ () => setPreview("desktop")}>Desktop</button>
                  <button className={`underline
-                 ${faithhubPreview !== "mobile" ? " text-gray-500 hover:text-gray-700" : ""}`}
-                 onClick={ () => setFaithhubPreview("mobile")}>Mobile</button>
+                 ${preview !== "mobile" ? " text-gray-500 hover:text-gray-700" : ""}`}
+                 onClick={ () => setPreview("mobile")}>Mobile</button>
 
             </div>
             </Transition>
