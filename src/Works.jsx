@@ -120,6 +120,47 @@ const Works = ({ setShowWorks }) => {
                         </li>
                     </ul>
                 </div>
+                <div className='mt-7 '>
+                    <h3 className='text-2xl font-bold'>What I&apos;ve built and learned</h3>
+                    <ul className='mt-2 text-lg'>
+                        <li className='hover:text-cyan-400'>
+                            <span className='font-bold  '>User authentication: </span>Implementing secure user authentication using <span className='font-bold'>BCRYPT</span> for password encryption, <span className='font-bold'>Passport</span> and <span className='font-bold'>JWT tokens</span> to ensure that only authorized users can access the platform.
+                        </li>
+                        <li className='hover:text-cyan-400'>
+                            <span className='font-bold  '>Profile management: </span>Allowing users to <span className=' font-bold'>create, edit and delete</span> their profiles, including personal information, profile pictures, and bio.
+                        </li>
+                        <li className='hover:text-cyan-400'>
+                            <span className='font-bold  '>Post Creation and Management: </span>Enabling users to <span className=' font-bold'>create, edit and delete</span> posts across various topics such as prayer requests, testimonies, and discussions. <span className='font-bold'>Prayer requests can be made anonymous.</span>
+                        </li>
+                        <li className='hover:text-cyan-400'>
+                            <span className='font-bold  '>Interacting with posts and comments: </span> Granting to users the possibility to <span className=' font-bold'>comment, like and interact</span> with other posts.
+                        </li>
+                        <li className='hover:text-cyan-400'>
+                            <span className='font-bold  '>Personalized feed: </span>Implementing topic-based feeds to categorize posts and allow users to explore content based on their <span className='font-bold'>preferences.</span>
+                        </li>
+                        <span className='font-bold'>Responsive Design: </span> Developing a responsive and user-friendly interface that ensures a seamless experience <span className='font-bold'>across different devices</span> and screen sizes.
+                    </ul>
+                </div>
+                <div className=' mt-7 '>
+                    <h3 className='text-2xl font-bold mb-2'> Ongoing development</h3>
+                    <h4 className='italic'>I&apos;m still actively working on this project as I&apos;ve found great enjoyment in its initial development stages. I&apos;ve decided to focus on making this project fully-fledged before moving on to other endeavors.
+                        Following is a list of the features I&apos;m currently developping. Please note that these are subject to change as the project evolves.
+                    </h4>
+                    <ul className='mt-2 text-lg'>
+                        <li className='hover:text-cyan-400'>
+                            <span className='font-bold  '>Code refactoring: </span>As this project marks my first significant venture into long-term development, the codebase has naturally grown quite extensive. I'm currently engaged in refactoring the code to enhance its readability, maintainability, and scalability.
+                        </li>
+                        <li className='hover:text-cyan-400'>
+                            <span className='font-bold  '>Church Groups Integration:  </span>One of the upcoming features I'm excited about is the integration of church groups functionality. This will include features such as locating nearby churches, accessing information on upcoming services, events, and more.
+                        </li>
+                        <li className='hover:text-cyan-400'>
+                            <span className='font-bold  '>Messaging System: </span>Creating a smooth messaging experience is a top priority. I'll be focusing on building a system that allows users to chat seamlessly with each other. This involves ensuring messages are delivered quickly and reliably, even during peak usage times.
+                        </li>
+                        <li className='hover:text-cyan-400'>
+                            <span className='font-bold  '>Live Notifications: </span> I'll be working on implementing a system that notifies users instantly about important events and interactions on the platform. This will help users stay connected and informed, enhancing the overall user experience.
+                        </li>
+                    </ul>
+                </div>
             </div>
             </Transition>
 
