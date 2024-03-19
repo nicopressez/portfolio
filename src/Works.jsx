@@ -4,6 +4,8 @@ import { faXmark, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-
 import { useState } from 'react';
 import arrowblack from "./assets/arrowblack.png"
 import { Transition } from '@headlessui/react';
+import faitthubwide from './assets/faithhubwide.mp4'
+import faithhubmobile from './assets/faithhubmobile.mp4'
 
 
 
@@ -19,6 +21,7 @@ const Works = ({ setShowWorks }) => {
          `}
          style={{ overflowY: "scroll", scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
+        
         <h1 className="absolute text-4xl font-roobert ">Works</h1>
             <FontAwesomeIcon icon={faXmark} 
             className="absolute right-10 h-6 w-6 hover:cursor-pointer"
@@ -74,10 +77,12 @@ const Works = ({ setShowWorks }) => {
             </div>
                  
                  {preview === "desktop" && 
-                 <div className='w-[52vw] h-[29.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
+                 <div className='w-[45vw] h-[25.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
+                    <video autoPlay loop src={faitthubwide} className='h-full w-full p-2 rounded-xl object-cover'></video>
                  </div>}
                  {preview === "mobile" && 
-                 <div className='w-[18vw] h-[29.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
+                 <div className='w-[18vw] h-[32.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
+                    <video autoPlay loop src={faithhubmobile} className='h-full w-full p-2 rounded-xl object-cover'></video>
                  </div>}
                  <button className={`mr-5 mt-2 underline
                  ${preview !== "desktop" ? " text-gray-500 hover:text-gray-700" : ""}`}
@@ -213,6 +218,7 @@ const Works = ({ setShowWorks }) => {
                  
                  {preview === "desktop" && 
                  <div className='w-[52vw] h-[29.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
+                
                  </div>}
                  {preview === "mobile" && 
                  <div className='w-[18vw] h-[29.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
