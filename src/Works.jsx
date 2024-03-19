@@ -85,7 +85,41 @@ const Works = ({ setShowWorks }) => {
                  <button className={`underline
                  ${preview !== "mobile" ? " text-gray-500 hover:text-gray-700" : ""}`}
                  onClick={ () => setPreview("mobile")}>Mobile</button>
-
+                <div className='mt-5'>
+                    <h3 className='text-2xl font-bold'>Technologies used</h3>
+                    <ul className=' mt-2 flex flex-wrap gap-2 justify-center font-bold'>
+                        <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>React
+                        </li>
+                        <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>Node.js
+                        </li>
+                        <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>Express
+                        </li>
+                        <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>MongoDB & Mongoose
+                        </li>
+                        <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>Tailwind
+                        </li>
+                        <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>Redux
+                        </li>
+                        <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>JWT
+                        </li>
+                        <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>AWS
+                        </li>
+                        <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>Multer
+                        </li>
+                        <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>Jest
+                        </li>
+                    </ul>
+                </div>
             </div>
             </Transition>
 
@@ -148,7 +182,23 @@ const Works = ({ setShowWorks }) => {
                  <button className={`underline
                  ${preview !== "mobile" ? " text-gray-500 hover:text-gray-700" : ""}`}
                  onClick={ () => setPreview("mobile")}>Mobile</button>
-
+            <div className='mt-5'>
+                    <h3 className='text-2xl font-bold'>Technologies used</h3>
+                    <ul className=' mt-2 flex flex-wrap gap-2 justify-center font-bold'>
+                        <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>React
+                        </li>
+                        <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>Tailwind
+                        </li>
+                        <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>Jest
+                        </li>
+                        <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>React Router
+                        </li>
+                    </ul>
+                </div>
             </div>
             </Transition>
         </div>
