@@ -186,7 +186,7 @@ const Works = ({ setShowWorks }) => {
              
             </div>
             <div className='text-center font-roobert'>
-                <h2 className='text-5xl font-bold 
+                <h2 className='text-5xl font-bold text-cyan-400
                  tracking-wide'>e-Commerce site</h2>
                  <p className='italic mb-3'>a React online shopping store</p>
                  
@@ -216,19 +216,13 @@ const Works = ({ setShowWorks }) => {
             </div>
             </div>
                  
-                 {preview === "desktop" && 
+                 
                  <div className='w-[52vw] h-[29.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
                 
-                 </div>}
-                 {preview === "mobile" && 
-                 <div className='w-[18vw] h-[29.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
-                 </div>}
-                 <button className={`mr-5 mt-2 underline
-                 ${preview !== "desktop" ? " text-gray-500 hover:text-gray-700" : ""}`}
-                 onClick={ () => setPreview("desktop")}>Desktop</button>
-                 <button className={`underline
-                 ${preview !== "mobile" ? " text-gray-500 hover:text-gray-700" : ""}`}
-                 onClick={ () => setPreview("mobile")}>Mobile</button>
+                 </div>
+                 
+                
+                 
             <div className='mt-5'>
                     <h3 className='text-2xl font-bold'>Technologies used</h3>
                     <ul className=' mt-2 flex flex-wrap gap-2 justify-center font-bold'>
@@ -244,6 +238,27 @@ const Works = ({ setShowWorks }) => {
                         <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
                          transition-colors duration-100 hover:cursor-pointer'>React Router
                         </li>
+                    </ul>
+                </div>
+                <div className='mt-7 '>
+                    <h3 className='text-2xl font-bold'>What I&apos;ve built and learned</h3>
+                    <ul className='mt-2 text-lg'>
+                        <li className='hover:text-cyan-400'>
+                            <span className='font-bold  '>Shopping cart: </span> Add, remove and update items from the shopping cart.
+                        </li>
+                        <li className='hover:text-cyan-400'>
+                            <span className='font-bold  '>Select sizes: </span>Detects whether or not an item is an accessory before presenting size options.
+                        </li>
+                        <li className='hover:text-cyan-400'>
+                            <span className='font-bold  '>Search features: </span>Search results that update <span className='font-bold'>as you type </span>and show how many items are available.
+                        </li>
+                        <li className='hover:text-cyan-400'>
+                            <span className='font-bold  '>Dynamically updated store and filters: </span> Simply adding a new item <span className='font-bold'>updates the store page</span> and adds its properties to the filter box.
+                        </li>
+                        <li className='hover:text-cyan-400'>
+                            <span className='font-bold  '>Sorting: </span>Items can be <span className='font-bold'>sorted</span> by price, colors, brands and type. Multiple filters can be active at once.
+                        </li>
+                        <span className='font-bold'>Checkout page: </span> Shows subtotal, shipping and taxes, all adding up to the Total price. Quantity can be <span className='font-bold'>updated and items removed.</span>
                     </ul>
                 </div>
             </div>
