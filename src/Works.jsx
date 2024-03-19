@@ -6,6 +6,7 @@ import arrowblack from "./assets/arrowblack.png"
 import { Transition } from '@headlessui/react';
 import faitthubwide from './assets/faithhubwide.mp4'
 import faithhubmobile from './assets/faithhubmobile.mp4'
+import ecommerce from './assets/ecommerce.mp4'
 
 
 
@@ -77,7 +78,7 @@ const Works = ({ setShowWorks }) => {
             </div>
                  
                  {preview === "desktop" && 
-                 <div className='w-[45vw] h-[25.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
+                 <div className='w-[62vw] h-[29vw]  bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
                     <video autoPlay loop src={faitthubwide} className='h-full w-full p-2 rounded-xl object-cover'></video>
                  </div>}
                  {preview === "mobile" && 
@@ -217,8 +218,8 @@ const Works = ({ setShowWorks }) => {
             </div>
                  
                  
-                 <div className='w-[52vw] h-[29.25vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
-                
+                 <div className='w-[62vw] h-[29vw] bg-gray-300 rounded-xl mr-auto ml-auto mt-4'>
+                 <video autoPlay loop src={ecommerce} className='h-full w-full p-2 rounded-xl object-cover'></video>
                  </div>
                  
                 
