@@ -94,6 +94,9 @@ const Works = ({ setShowWorks }) => {
                 <div className='mt-5'>
                     <h3 className='text-2xl font-bold'>Technologies used</h3>
                     <ul className=' mt-2 flex flex-wrap gap-2 justify-center font-bold'>
+                    <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
+                         transition-colors duration-100 hover:cursor-pointer'>Typescript
+                         </li>
                         <li className=' border-2  border-black pl-2 pr-2 rounded-full text-xl hover:border-cyan-500 hover:text-cyan-500
                          transition-colors duration-100 hover:cursor-pointer'>React
                         </li>
